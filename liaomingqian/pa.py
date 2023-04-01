@@ -38,7 +38,7 @@ def main():
 
     # 获取搜索结果页面中所有帆船的详情页链接
     yacht_links = [f'{base_url}{a["href"]}' for a in soup.select('.tile-info h2 a')]
-
+    print(len(yacht_links))
     # 爬取所有帆船的year属性和价格数据，并将它们存储到CSV文件中
     yacht_data_list = []
     for link in yacht_links:
